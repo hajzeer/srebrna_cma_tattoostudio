@@ -7,6 +7,12 @@
     <div class="container">
       <header>
       </header>
+      <button class="contact__button" @click="toggleClick()">
+        <img src="..\src\assets\kontakt button 2.png"/>
+      </button>
+      <transition name="slide-fade">
+        <Contact v-if="visiblity" />
+      </transition>
       <img class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
       <p class="studio__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -37,11 +43,25 @@
 
 <script>
 import HeroImage from './components/HeroImage.vue';
+import Contact from './components/Contact.vue';
 
 export default {
   name: 'App',
+
+  data() {
+    return {
+      visiblity: false,
+    };
+  },
+
   components: {
     HeroImage,
+    Contact,
+  },
+  methods: {
+    toggleClick() {
+      this.visiblity = !this.visiblity;
+    },
   },
 };
 </script>
@@ -69,16 +89,31 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10em #E3E3E3;
+  box-shadow: 0 0 50em #E3E3E3;
 
     header{
-    z-index: 98;
+    display: block;
+    z-index: 2;
     top: 0;
     width: 0;
-    height: 70px;
+    height: 80px;
     border-bottom: 35px solid transparent;
     border-left: 100vw solid #353535;
   }
+
+    .contact__button {
+      align-self: flex-start;
+      z-index: 5;
+      width: 100px;
+      position: relative;
+      top: -8em;
+      border: none;
+      background: transparent;
+
+      img{
+        width: 100%;
+      }
+    }
 
   .studio__description{
     font-family: 'Quicksand', sans-serif;
@@ -87,7 +122,6 @@ body{
   }
 
   .studio__photo{
-    margin-top: 100px;
     width: 250px;
     border-radius: 20%;
     box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
@@ -140,5 +174,15 @@ body{
       font-weight: 500;
     }
   }
+}
+
+.slide-fade-enter-active {
+  transition: all .2s ease-in-out;
+}
+.slide-fade-leave-active {
+  transition: all .2s ease-in-out;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  opacity: 0;
 }
 </style>
