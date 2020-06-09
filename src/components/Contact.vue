@@ -1,18 +1,14 @@
 <template>
 <div>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-<link href='https://css.gg/close.css' rel='stylesheet'>
 <link href='https://css.gg/instagram.css' rel='stylesheet'>
 <link href='https://css.gg/facebook.css' rel='stylesheet'>
-  <div class="contact" v-if="visible">
-    <button class="close__cross" @click="toggleClick()">
-      <i class="gg-close"></i>
-  </button>
+  <div class="contact">
   <ul class="contact__list">
-    <li>SREBRNA ĆMA TATTOO STUDIO</li>
+    <li>SREBRNA ĆMA<br/>TATTOO STUDIO</li>
     <li>
       <a href="https://goo.gl/maps/ozFcN2nJvvj3aeDP6">
-        Piastowska 7, Tarnowskie Gory
+        Piastowska 7 Tarnowskie Gory
         <br/>
         (Prowadź do Nas)
       </a>
@@ -52,17 +48,6 @@
 
 export default {
   name: 'Contact',
-  data() {
-    return {
-      visible: true,
-    };
-  },
-
-  methods: {
-    toggleClick() {
-      this.visible = !this.visible;
-    },
-  },
 };
 </script>
 
@@ -80,7 +65,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 99;
+    z-index: 98;
     width: 100%;
     height: 100vh;
     top: 0;

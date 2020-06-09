@@ -3,9 +3,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
         <link href='https://css.gg/chevron-down.css' rel='stylesheet'>
         <div class="hero__image">
-          <img class="logo" src="..\..\src\assets\srebrna_cma_logo —smokewhite.png"/>
-          <p class="scroll__text">PRZEWIŃ ABY ZOBACZYĆ WIĘCEJ</p>
-          <i class="gg-chevron-down"></i>
+          <img
+            v-scrollanimation
+            class="logo"
+            src="..\..\src\assets\srebrna_cma_logo —smokewhite.png"
+          />
+          <p v-scrollanimation class="scroll__text">PRZEWIŃ ABY ZOBACZYĆ WIĘCEJ</p>
+          <i v-scrollanimation class="gg-chevron-down"></i>
         </div>
     </div>
 </template>
@@ -83,4 +87,11 @@ export default {
   }
 }
 
+.before-enter {
+  transform: scale(1.7);
+  transition: all .6s ease-in-out;
+}
+.enter{
+  transform: scale(1);
+}
 </style>

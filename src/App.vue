@@ -1,20 +1,24 @@
 <template>
   <div class="app">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href='https://css.gg/instagram.css' rel='stylesheet'>
     <div class="wrapper">
       <HeroImage />
     </div>
-    <div class="container">
-      <header>
-      </header>
-      <button class="contact__button" @click="toggleClick()">
+      <button v-fixedposition class="contact__button" @click="toggleClick()">
         <img src="..\src\assets\kontakt button 2.png"/>
       </button>
-      <transition name="slide-fade">
-        <Contact v-if="visiblity" />
+    <div class="container">
+      <transition name="fade">
+        <div v-if="visiblity">
+          <Contact />
+        </div>
       </transition>
-      <img class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
-      <p class="studio__description">
+      <header>
+      </header>
+      <img class="logo" src="..\src\assets\srebrna_cma_logo —smokewhite.png"/>
+      <img v-scrollanimation class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
+      <p v-scrollanimation class="studio__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla.
         Quisque dignissim elit at odio viverra cursus.
@@ -24,18 +28,19 @@
         tincidunt sit amet dui nec, mattis luctus nulla.
         Etiam nec eros scelerisque, tristique diam ut, iaculis tortor.
       </p>
-      <div class="studio__crew">
-        <h1>NASZ ZESPÓŁ</h1>
-        <img class="personal__photo" src="..\src\assets\pelikan.jpg"/>
-        <h2 class="personal__name">Rafał "PELIKAN" Kowalski</h2>
-        <p class="personal__description">
+      <div v-scrollanimation class="studio__crew">
+        <h1 v-scrollanimation>NASZ ZESPÓŁ</h1>
+        <img v-scrollanimation class="personal__photo" src="..\src\assets\pelikan.jpg"/>
+        <h2 v-scrollanimation class="personal__name">Rafał "PELIKAN" Kowalski</h2>
+        <p v-scrollanimation class="personal__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla.
         Quisque dignissim elit at odio viverra cursus.
       </p>
+      <i v-scrollanimation class="gg-instagram" ></i>
       </div>
       <div class="studio__portfolio">
-        <h1>NASZE PRACE</h1>
+        <h1 v-scrollanimation>NASZE PRACE</h1>
       </div>
     </div>
   </div>
@@ -67,6 +72,23 @@ export default {
 </script>
 
 <style lang="scss">
+
+.before-enter {
+  opacity: 0;
+  transition: all .4s .4s ease-in;
+}
+.enter{
+  opacity: 1;
+}
+
+.before-fixed {
+  opacity: 0;
+  transition: all .6s 4s ease-in-out;
+}
+.fixed{
+  opacity: 1;
+}
+
 body{
   margin: 0;
   background-color: #E3E3E3;
@@ -75,6 +97,21 @@ body{
   width: 100%;
   height: 100vh;
 }
+
+    .contact__button {
+      align-self: flex-start;
+      z-index: 999;
+      width: 100px;
+      top: 7em;
+      right: 1em;
+      border: none;
+      background: transparent;
+      position: fixed;
+
+      img{
+        width: 100%;
+      }
+    }
 
 .container{
   z-index: 3;
@@ -89,36 +126,29 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 50em #E3E3E3;
+  box-shadow: 0 0 50rem #E3E3E3;
 
     header{
     display: block;
-    z-index: 2;
+    z-index: 5;
     top: 0;
     width: 0;
     height: 80px;
     border-bottom: 35px solid transparent;
     border-left: 100vw solid #353535;
   }
-
-    .contact__button {
-      align-self: flex-start;
-      z-index: 5;
-      width: 100px;
-      position: relative;
-      top: -8em;
-      border: none;
-      background: transparent;
-
-      img{
-        width: 100%;
-      }
-    }
-
+  .logo{
+    align-self: flex-start;
+    z-index: 6;
+    width: 100px;
+    position: relative;
+    top: -6.5em;
+    transform: rotate(45deg);
+  }
   .studio__description{
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
-    padding: 15px;
+    padding: 20px;
   }
 
   .studio__photo{
@@ -162,7 +192,7 @@ body{
       margin-top: -20px;
       font-family: 'Quicksand', sans-serif;
       font-size: 15px;
-      padding: 15px;
+      padding: 20px;
     }
   }
 
@@ -176,13 +206,10 @@ body{
   }
 }
 
-.slide-fade-enter-active {
-  transition: all .2s ease-in-out;
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
 }
-.slide-fade-leave-active {
-  transition: all .2s ease-in-out;
-}
-.slide-fade-enter, .slide-fade-leave-to {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 </style>
