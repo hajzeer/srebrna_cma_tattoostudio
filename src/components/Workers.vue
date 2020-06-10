@@ -36,7 +36,7 @@ export default {
 
   methods: {
     handleClick() {
-      window.open('https://www.instagram.com/tattoopelikan/?hl=pl', '_blank');
+      window.open(this.item.ig_href, '_blank');
     },
   },
 };
