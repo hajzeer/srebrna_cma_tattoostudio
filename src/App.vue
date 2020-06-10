@@ -28,16 +28,12 @@
         tincidunt sit amet dui nec, mattis luctus nulla.
         Etiam nec eros scelerisque, tristique diam ut, iaculis tortor.
       </p>
-      <div v-scrollanimation class="studio__crew">
-        <h1 v-scrollanimation>NASZ ZESPÓŁ</h1>
-        <img v-scrollanimation class="personal__photo" src="..\src\assets\pelikan.jpg"/>
-        <h2 v-scrollanimation class="personal__name">Rafał "PELIKAN" Kowalski</h2>
-        <p v-scrollanimation class="personal__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla.
-        Quisque dignissim elit at odio viverra cursus.
-      </p>
-      <i v-scrollanimation class="gg-instagram" ></i>
+      <div>
+      <Workers
+        v-for="item in workers"
+        :item="item"
+        :key="item.id"
+      />
       </div>
       <div class="studio__portfolio">
         <h1 v-scrollanimation>NASZE PRACE</h1>
@@ -49,6 +45,9 @@
 <script>
 import HeroImage from './components/HeroImage.vue';
 import Contact from './components/Contact.vue';
+import Workers from './components/Workers.vue';
+
+import photo0 from './assets/pelikan.jpg';
 
 export default {
   name: 'App',
@@ -56,12 +55,23 @@ export default {
   data() {
     return {
       visiblity: false,
+
+      workers: [
+        {
+          id: 0,
+          photo: photo0,
+          name: 'Rafał "Pelikan" Kowalski',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla. Quisque dignissim elit at odio viverra cursus.',
+          ig_href: 'https://www.instagram.com/tattoopelikan/?hl=pl',
+        },
+      ],
     };
   },
 
   components: {
     HeroImage,
     Contact,
+    Workers,
   },
   methods: {
     toggleClick() {
@@ -157,44 +167,6 @@ body{
     box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
   }
 
-  .studio__crew{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h1{
-      font-family: 'Quicksand', sans-serif;
-      font-size: 30px;
-      font-weight: 500;
-      margin-bottom: -20px;
-    }
-    .personal__photo{
-      margin-top: 50px;
-      width: 250px;
-      border-radius: 20%;
-      box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
-    }
-    .personal__name{
-      font-family: 'Quicksand', sans-serif;
-      font-size: 25px;
-      font-weight: 400;
-      padding: 15px;
-      text-align: center;
-    }
-    .personal__description{
-      margin-top: -20px;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 15px;
-      padding: 20px;
-    }
-  }
 
   .studio__portfolio{
 
