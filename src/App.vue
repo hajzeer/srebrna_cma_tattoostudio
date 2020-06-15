@@ -135,7 +135,7 @@ body{
 
 .container{
   background-color: #E3E3E3;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
   top: 0;
