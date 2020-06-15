@@ -80,10 +80,42 @@ export default {
     transform: translateY(0);
   }
   50%{
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   100%{
     transform: translateY(0)
+  }
+}
+
+@media (min-width: 768px) {
+
+  .hero__image {
+
+    .logo {
+      width: 90%;
+    }
+    .scroll__text {
+      font-size: 25px;
+    }
+
+    .gg-chevron-down {
+      &::after {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .hero__image {
+
+    background-position: 50% 50%;
+    background-size: .7;
+    .logo {
+      width: 40%;
+    }
   }
 }
 

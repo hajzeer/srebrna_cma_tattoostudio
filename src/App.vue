@@ -17,18 +17,20 @@
       <header>
       </header>
       <img class="logo" src="..\src\assets\srebrna_cma_logo —smokewhite.png"/>
-      <img v-scrollanimation class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
+        <div class="studio__info">
+          <img v-scrollanimation class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
       <p v-scrollanimation class="studio__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla.
-        Quisque dignissim elit at odio viverra cursus.
-        Aliquam erat volutpat. Vestibulum ac massa lobortis,
-        efficitur diam ut, vulputate orci. Ut ac neque libero.
-        Praesent egestas sed diam non pretium. Praesent urna quam,
-        tincidunt sit amet dui nec, mattis luctus nulla.
-        Etiam nec eros scelerisque, tristique diam ut, iaculis tortor.
+        Srebrna Ćma była w marzeniach jej twórcy już od 2019 roku, jednak
+        dopiero w 2020 udało się je spełnić. Stała się tym samym najmłodszym
+        studiem tatuażu na mapie Tarnowskich Gór. Po kilkuletnim doświadczeniu
+        w branży – Rafał „Pelikan” Kowalski – postanowił stworzyć własne
+        miejsce, w którym każdy doświadczy prawdziwego piękna świata tatuażu.
+        Świat ten łączy ze sobą ludzi, historie, pasje i marzenia, których
+        wynikiem jest lub będzie Wasz tatuaż
       </p>
-      <div>
+        </div>
+      <div class="workers">
+      <h1 v-scrollanimation>NASZ ZESPÓŁ</h1>
       <Workers
         v-for="item in workers"
         :item="item"
@@ -61,8 +63,15 @@ export default {
           id: 0,
           photo: photo0,
           name: 'Rafał "Pelikan" Kowalski',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Curabitur a urna ac quam feugiat pellentesque. Integer at fermentum nulla. Quisque dignissim elit at odio viverra cursus.',
+          desc: 'Rafał „Pelikan”– założyciel Srebrnej Ćmy. Tatuator od 2015 roku. Tarnogórzanin, który ostatnie lata spędził pracując w katowickich studiach tatuażu. Najlepiej czuje się w czerni, pracując w stylu dotwork/blackwork. Jego tatuaże cechują się delikatną kreską, ale woli gdy jego prace po prostu mówią same za siebie',
           ig_href: 'https://www.instagram.com/tattoopelikan/?hl=pl',
+        },
+        {
+          id: 0,
+          photo: '#',
+          name: 'Magda',
+          desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie je to miejsce',
+          ig_href: 0,
         },
       ],
     };
@@ -82,6 +91,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 
 .before-enter {
   opacity: 0;
@@ -124,7 +134,6 @@ body{
     }
 
 .container{
-  z-index: 3;
   background-color: #E3E3E3;
   width: 100%;
   margin: 0;
@@ -138,11 +147,8 @@ body{
   align-items: center;
   box-shadow: 0 0 50rem #E3E3E3;
 
-    header{
+  header{
     display: block;
-    z-index: 5;
-    top: 0;
-    width: 0;
     height: 80px;
     border-bottom: 35px solid transparent;
     border-left: 100vw solid #353535;
@@ -155,7 +161,21 @@ body{
     top: -6.5em;
     transform: rotate(45deg);
   }
+
+  .studio__info {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .studio__description{
+    text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     padding: 20px;
@@ -167,14 +187,72 @@ body{
     box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
   }
 
+  h1{
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
 
-  .studio__portfolio{
+@media (min-width: 768px) {
+  .contact__button {
+    top: 17em;
+  }
 
-    h1{
-      font-family: 'Quicksand', sans-serif;
-      font-size: 30px;
-      font-weight: 500;
+  .container {
+    header {
+      top: 0;
+      width: 0;
+      height: 150px;
     }
+
+    .logo {
+      top: -10.5em;
+      width: 175px;
+    }
+
+  .studio__info {
+    margin-top: -100px;
+
+    .studio__photo {
+      width: 350px;
+      margin-left: 50px;
+      margin-right: 20px;
+    }
+    .studio__description {
+      width: 600px;
+      font-size: 20px;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+
+  .studio__info {
+    margin-top: -100px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .studio__photo {
+      width: 450px;
+    }
+    .studio__description {
+      width: 500px;
+      font-size: 20px;
+    }
+  }
+
+  h1{
+    font-size: 4em;
+  }
   }
 }
 

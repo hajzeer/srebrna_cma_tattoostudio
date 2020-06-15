@@ -29,10 +29,14 @@
     </li>
   </ul>
   <div class="social__media">
-    <i class="gg-instagram" ></i>
-    <i class="gg-facebook"></i>
+    <button class="ig__button" @click="handleClick('https://www.instagram.com/srebrnacma/')">
+      <i class="gg-instagram" ></i>
+    </button>
+    <button class="fb__button" @click="handleClick('https://www.facebook.com/Srebrna-%C4%86ma-Tattoo-Studio-112720617142798')">
+      <i class="gg-facebook"></i>
+    </button>
   </div>
-    <div className="footer">
+    <div class="footer">
       <p class="designer">
         Polityka prywatności: <br/>
         © 2020  Designed by Grupa CODA
@@ -48,17 +52,16 @@
 
 export default {
   name: 'Contact',
+
+  methods: {
+    handleClick(el) {
+      window.open(el, '_blank');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.close__cross {
-  background: transparent;
-  border: transparent;
-  align-self: flex-end;
-  padding: 20px;
-  top: -100px;
-}
 .contact{
     display: flex;
     flex-direction: column;
@@ -97,6 +100,32 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .ig__button {
+    background: transparent;
+    border: transparent;
+  }
+
+  .fb__button{
+    background: transparent;
+    border: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .contact__list {
+      font-size: 30px;
+      ::first-line {
+      font-size: 35px;
+      }
+    }
+
+    .footer {
+      .designer {
+        margin: 50px 0 0 0;
+        font-size: 20px;
+      }
+    }
   }
 }
 </style>
