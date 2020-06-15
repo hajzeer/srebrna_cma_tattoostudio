@@ -66,6 +66,7 @@ export default {
       box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
     }
     .personal__name{
+      text-align: center;
       font-family: 'Quicksand', sans-serif;
       font-size: 25px;
       font-weight: 400;
