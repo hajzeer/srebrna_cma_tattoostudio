@@ -112,9 +112,8 @@ export default {
   .hero__image {
 
     background-position: 50% 50%;
-    background-size: .7;
     .logo {
-      width: 40%;
+      width: 35%;
     }
   }
 }
