@@ -6,7 +6,7 @@
           <img
             v-scrollanimation
             class="logo"
-            src="..\..\src\assets\srebrna_cma_logo —smokewhite.png"
+            src="../../src/assets/srebrna_cma_logo —smokewhite.png"
           />
           <p v-scrollanimation class="scroll__text">PRZEWIŃ ABY ZOBACZYĆ WIĘCEJ</p>
           <i v-scrollanimation class="gg-chevron-down"></i>

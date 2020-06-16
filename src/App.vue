@@ -6,7 +6,7 @@
       <HeroImage />
     </div>
       <button v-fixedposition class="contact__button" @click="toggleClick()">
-        <img src="..\src\assets\kontakt button 2.png"/>
+        <img src="../src/assets/kontakt button 2.png"/>
       </button>
     <div class="container">
       <transition name="fade">
@@ -16,9 +16,9 @@
       </transition>
       <header>
       </header>
-      <img class="logo" src="..\src\assets\srebrna_cma_logo —smokewhite.png"/>
+      <img class="logo" src="../src/assets/srebrna_cma_logo —smokewhite.png"/>
         <div class="studio__info">
-          <img v-scrollanimation class="studio__photo" src="..\src\assets\studio_photo.jpg"/>
+          <img v-scrollanimation class="studio__photo" src="../src/assets/studio_photo.jpg"/>
       <p v-scrollanimation class="studio__description">
         Srebrna Ćma była w marzeniach jej twórcy już od 2019 roku, jednak
         dopiero w 2020 udało się je spełnić. Stała się tym samym najmłodszym
