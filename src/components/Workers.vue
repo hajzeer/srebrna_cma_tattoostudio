@@ -72,6 +72,13 @@ export default {
       font-weight: 400;
     }
 
+    .personal__info1 {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+    }
     .personal__info2 {
       display: flex;
       flex-direction: column;
