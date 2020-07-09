@@ -134,7 +134,7 @@ body{
     }
 
 .container{
-  background-color: #E3E3E3;
+  background-color: #353535;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -151,7 +151,7 @@ body{
     display: block;
     height: 80px;
     border-bottom: 35px solid transparent;
-    border-left: 100vw solid #353535;
+    border-left: 100vw solid #1c1c1c;
   }
   .logo{
     align-self: flex-start;
@@ -179,6 +179,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     padding: 20px;
+    color: #E3E3E3;
   }
 
   .studio__photo{
@@ -192,6 +193,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     font-weight: 500;
+    color: #E3E3E3;
   }
 }
 

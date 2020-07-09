@@ -70,6 +70,7 @@ export default {
       font-family: 'Quicksand', sans-serif;
       font-size: 25px;
       font-weight: 400;
+      color: #E3E3E3;
     }
 
     .personal__info1 {
@@ -85,6 +86,7 @@ export default {
       justify-items: center;
       align-items: center;
       justify-content: center;
+      color: #E3E3E3;
     }
     .personal__description{
       text-align: center;
@@ -101,6 +103,7 @@ export default {
         padding: 0;
         width: 30px;
         height: 30px;
+        color: #E3E3E3;
 
       .gg-instagram {
         width: 100%;
@@ -122,10 +125,6 @@ export default {
   }
 
   @media (min-width: 768px) {
-    h1 {
-      font-size: 40px;
-    }
-
     .studio__crew {
       .personal__photo {
         width: 350px;

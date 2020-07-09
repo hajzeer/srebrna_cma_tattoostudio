@@ -75,13 +75,14 @@ export default {
     left: 0;
     padding: 0;
     margin: 0;
-    background-color: #E3E3E3E3;
+    background-color: #353535;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 
     .contact__list{
       list-style-type: none;
       padding: 0;
+      color: #E3E3E3;
       ::first-line{
         font-size: 20px;
         font-weight: 500;
@@ -90,7 +91,7 @@ export default {
         margin-bottom: 20px;
       a {
         text-decoration: none;
-        color: #000000;
+        color: #E3E3E3;
       }
     }
   }
@@ -105,11 +106,17 @@ export default {
   .ig__button {
     background: transparent;
     border: transparent;
+    color: #E3E3E3;
   }
 
   .fb__button{
     background: transparent;
     border: transparent;
+    color: #E3E3E3;
+  }
+
+  .footer {
+    color: #E3E3E3;
   }
 
   @media (min-width: 768px) {
