@@ -8,7 +8,7 @@
     <li>SREBRNA ĆMA<br/>TATTOO STUDIO</li>
     <li>
       <a href="https://goo.gl/maps/ozFcN2nJvvj3aeDP6">
-        Piastowska 7 Tarnowskie Gory
+        Piastowska 7 Tarnowskie Góry
         <br/>
         (Prowadź do Nas)
       </a>
