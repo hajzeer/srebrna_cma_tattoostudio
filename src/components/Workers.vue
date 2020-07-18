@@ -104,6 +104,7 @@ export default {
         width: 30px;
         height: 30px;
         color: #E3E3E3;
+        z-index: 0;
 
       .gg-instagram {
         width: 100%;

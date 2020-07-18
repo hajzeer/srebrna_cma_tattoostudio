@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <LoadingScreen />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <link href='https://css.gg/instagram.css' rel='stylesheet'>
     <div class="wrapper">
@@ -48,6 +49,7 @@
 import HeroImage from './components/HeroImage.vue';
 import Contact from './components/Contact.vue';
 import Workers from './components/Workers.vue';
+import LoadingScreen from './components/loading_screen.vue';
 
 import photo0 from './assets/pelikan.jpg';
 
@@ -81,6 +83,7 @@ export default {
     HeroImage,
     Contact,
     Workers,
+    LoadingScreen,
   },
   methods: {
     toggleClick() {
@@ -103,7 +106,7 @@ export default {
 
 .before-fixed {
   opacity: 0;
-  transition: all .6s 4s ease-in-out;
+  transition: all .6s 7s ease-in-out;
 }
 .fixed{
   opacity: 1;
@@ -155,7 +158,6 @@ body{
   }
   .logo{
     align-self: flex-start;
-    z-index: 6;
     width: 100px;
     position: relative;
     top: -6.5em;

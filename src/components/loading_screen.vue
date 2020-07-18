@@ -1,22 +1,38 @@
 <template>
+  <transition name="fade">
     <div class="hero__imageOuter">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-        <link href='https://css.gg/chevron-down.css' rel='stylesheet'>
-        <div class="hero__image">
+        <link href='https://css.gg/loadbar-alt.css' rel='stylesheet'>
+        <div v-if="show" class="hero__image">
           <img
-            v-scrollanimation
             class="logo"
             src="../../src/assets/srebrna_cma_logo —smokewhite.png"
           />
-          <p v-scrollanimation class="scroll__text">PRZEWIŃ ABY ZOBACZYĆ WIĘCEJ</p>
-          <i v-scrollanimation class="gg-chevron-down"></i>
+          <i class="gg-loadbar-alt"></i>
         </div>
     </div>
+  </transition>
 </template>
 
 <script>
 export default {
   name: 'HeroImage',
+
+  data() {
+    return {
+      show: true,
+    };
+  },
+  mounted() {
+    this.showToggle();
+  },
+  methods: {
+    showToggle() {
+      setTimeout(() => {
+        this.show = false;
+      }, 3000);
+    },
+  },
 };
 </script>
 
@@ -29,14 +45,14 @@ export default {
   align-items: center;
   position: fixed;
 
-  z-index: -99;
+  z-index: 9999;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   padding: 0;
   margin: 0;
-  background-image: url('../assets/HeroImage.jpg');
+  background-color: #1c1c1c;
   background-repeat: no-repeat;
   background-size:cover;
   background-position: 50% 100%;
@@ -60,30 +76,11 @@ export default {
     font-family: 'Quicksand', sans-serif;
   }
 
-  .gg-chevron-down {
-    z-index: 2;
-    box-sizing: border-box;
-    color: #C2C2C2;
-    animation: jumper 2s infinite;
-  }
-
   .logo{
     z-index: 2;
     width: 100%;
     height: auto;
     margin: 0;
-  }
-}
-
-@keyframes jumper {
-  0% {
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(15px);
-  }
-  100%{
-    transform: translateY(0)
   }
 }
 
@@ -97,15 +94,42 @@ export default {
     .scroll__text {
       font-size: 25px;
     }
-
-    .gg-chevron-down {
-      &::after {
-        width: 20px;
-        height: 20px;
-      }
-    }
   }
 }
+
+@keyframes loadbaralt {
+    0%,to { left: 0; right: 80% }
+    25%,75% { left: 0; right: 0 }
+    50% { left: 80%; right: 0 }
+}
+.gg-loadbar-alt,
+.gg-loadbar-alt::before,
+.gg-loadbar-alt::after {
+    display: block;
+    box-sizing: border-box;
+    height: 10px;
+    border-radius: 4px;
+    color: #C2C2C2;
+}
+.gg-loadbar-alt {
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 200px
+}
+.gg-loadbar-alt::after,
+.gg-loadbar-alt::before {
+    background: currentColor;
+    content: "";
+    position: absolute
+}
+.gg-loadbar-alt::before {
+    animation: loadbaralt 12s cubic-bezier(0,0,.58,1) infinite
+}
+.gg-loadbar-alt::after {
+    width: 200px;
+    opacity: .3
+}
+
 
 @media (min-width: 1024px) {
 
@@ -117,12 +141,10 @@ export default {
     }
   }
 }
-
-.before-enter {
-  transform: scale(1.7);
-  transition: all .6s 3.2s ease-in-out;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease-out;
 }
-.enter{
-  transform: scale(1);
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
