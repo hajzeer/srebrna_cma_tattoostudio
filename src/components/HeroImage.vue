@@ -120,7 +120,7 @@ export default {
 
 .before-enter {
   transform: scale(1.7);
-  transition: all .6s 10.2s ease-in-out;
+  transition: all .6s 5.2s ease-in-out;
 }
 .enter{
   transform: scale(1);

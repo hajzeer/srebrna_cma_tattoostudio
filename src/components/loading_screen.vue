@@ -29,7 +29,7 @@ export default {
     showToggle() {
       setTimeout(() => {
         this.show = false;
-      }, 10000);
+      }, 5000);
     },
   },
 };
@@ -112,7 +112,7 @@ export default {
     position: absolute
 }
 .gg-loadbar-alt::before {
-    animation: loadbaralt 20s cubic-bezier(0,0,.58,1) infinite
+    animation: loadbaralt 10s cubic-bezier(0,0,.58,1) infinite
 }
 .gg-loadbar-alt::after {
     width: 200px;

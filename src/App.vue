@@ -106,7 +106,7 @@ export default {
 
 .before-fixed {
   opacity: 0;
-  transition: all .6s 11s ease-in-out;
+  transition: all .6s 8s ease-in-out;
 }
 .fixed{
   opacity: 1;
