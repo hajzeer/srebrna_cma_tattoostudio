@@ -1,7 +1,6 @@
 <template>
   <transition name="fade">
     <div class="hero__imageOuter">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
         <link href='https://css.gg/loadbar-alt.css' rel='stylesheet'>
         <div v-if="show" class="hero__image">
           <img
@@ -16,7 +15,7 @@
 
 <script>
 export default {
-  name: 'HeroImage',
+  name: 'LoadingScreen',
 
   data() {
     return {
@@ -68,18 +67,11 @@ export default {
     height: 100vh;
   }
 
-  .scroll__text{
-    z-index: 2;
-    text-align: center;
-    color: #C2C2C2;
-    font-size: 18px;
-    font-family: 'Quicksand', sans-serif;
-  }
-
   .logo{
     z-index: 2;
     width: 100%;
     height: auto;
+    top: - 50px;
     margin: 0;
   }
 }
@@ -90,9 +82,6 @@ export default {
 
     .logo {
       width: 90%;
-    }
-    .scroll__text {
-      font-size: 25px;
     }
   }
 }
@@ -142,7 +131,7 @@ export default {
   }
 }
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s ease-out;
+  transition: opacity .5s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
