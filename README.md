@@ -1,29 +1,8 @@
-# srebrnacma_app
+# Srebrna Ćma Tattoo Studio
 
-## Project setup
-```
-npm install
-```
+## Created by: Krzysztof Hajder and Grupa CODA
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## powered by: Vue.js
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## features: Instagram API
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

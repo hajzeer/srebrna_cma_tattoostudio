@@ -1,7 +1,7 @@
 <template>
-  <transition name="fade">
     <div class="hero__imageOuter">
         <link href='https://css.gg/loadbar-alt.css' rel='stylesheet'>
+      <transition name="fade">
         <div v-if="show" class="hero__image">
           <img
             class="logo"
@@ -9,8 +9,8 @@
           />
           <i class="gg-loadbar-alt"></i>
         </div>
+      </transition>
     </div>
-  </transition>
 </template>
 
 <script>
@@ -81,7 +81,7 @@ export default {
   .hero__image {
 
     .logo {
-      width: 90%;
+      width: 70%;
     }
   }
 }
@@ -112,7 +112,7 @@ export default {
     position: absolute
 }
 .gg-loadbar-alt::before {
-    animation: loadbaralt 10s cubic-bezier(0,0,.58,1) infinite
+    animation: loadbaralt 3s cubic-bezier(0,0,.58,1) infinite
 }
 .gg-loadbar-alt::after {
     width: 200px;

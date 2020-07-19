@@ -92,7 +92,7 @@ export default {
   .hero__image {
 
     .logo {
-      width: 90%;
+      width:70%;
     }
     .scroll__text {
       font-size: 25px;

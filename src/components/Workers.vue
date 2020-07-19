@@ -47,6 +47,9 @@ export default {
 
 <style lang="scss" scoped>
 
+  .workers {
+    max-width: 100%;
+  }
 .studio__crew{
     width: 100vw;
     margin: 0 0 50px 0;
@@ -150,10 +153,10 @@ export default {
 
       .personal__info1 {
         text-align: center;
-        width: 100%;
+        width: 50%;
       }
       .personal__info2 {
-        width: 100%;
+        width: 50%;
         margin-top: 50px;
       }
 
