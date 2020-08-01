@@ -14,15 +14,15 @@
       </a>
     </li>
     <li>
-      <a href="tel:+48-123-456-789">
-        123 456 789
+      <a href="tel:+48-601-931-252">
+        601 931 252
         <br/>
         (Zadzwoń do Nas)
       </a>
     </li>
     <li>
-      <a href="mailto: mail@mail.com">
-        mail@mail.com
+      <a href="mailto: studio@srebrnacma.pl">
+        studio@srebrnacma.pl
         <br/>
         (Napisz do Nas)
       </a>
