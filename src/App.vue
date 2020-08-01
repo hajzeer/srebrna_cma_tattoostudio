@@ -7,19 +7,24 @@
       <HeroImage />
     </div>
       <button v-fixedposition class="contact__button" @click="toggleClick()">
-        <img src="../src/assets/kontakt button 2.png"/>
+        <img src="../src/assets/kontakt button 2.png" alt="contact button 2"/>
       </button>
     <div class="container">
       <transition name="fade">
-        <div v-if="visiblity">
+        <div v-if="visibility">
           <Contact />
         </div>
       </transition>
       <header>
       </header>
-      <img class="logo" src="../src/assets/srebrna_cma_logo —smokewhite.png"/>
+      <img class="logo" src="../src/assets/srebrna_cma_logo —smokewhite.png" alt="logo"/>
         <div class="studio__info">
-          <img v-scrollanimation class="studio__photo" src="../src/assets/studio_photo.jpg"/>
+          <img
+            v-scrollanimation
+            class="studio__photo"
+            src="../src/assets/studio_photo.jpg"
+            alt="studio photo"
+          />
       <p v-scrollanimation class="studio__description">
         Srebrna Ćma była w marzeniach jej twórcy już od 2019 roku, jednak
         dopiero w 2020 udało się je spełnić. Stała się tym samym najmłodszym
@@ -58,7 +63,7 @@ export default {
 
   data() {
     return {
-      visiblity: false,
+      visibility: false,
 
       workers: [
         {
@@ -87,7 +92,7 @@ export default {
   },
   methods: {
     toggleClick() {
-      this.visiblity = !this.visiblity;
+      this.visibility = !this.visibility;
     },
   },
 };
@@ -138,7 +143,7 @@ body{
 
 .container{
   background-color: #353535;
-  width: 10vw;
+  width: 100vw;
   margin: 0;
   padding: 0;
   top: 0;
@@ -238,7 +243,6 @@ body{
 
 @media (min-width: 1024px) {
   .container {
-    width: 100vw;
   .studio__info {
     margin-top: -100px;
     flex-direction: row;
