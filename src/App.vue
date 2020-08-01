@@ -106,7 +106,7 @@ export default {
 
 .before-fixed {
   opacity: 0;
-  transition: all .6s 8s ease-in-out;
+  transition: all .6s 7s ease-in-out;
 }
 .fixed{
   opacity: 1;
@@ -138,7 +138,7 @@ body{
 
 .container{
   background-color: #353535;
-  width: 100vw;
+  width: 10vw;
   margin: 0;
   padding: 0;
   top: 0;
@@ -238,7 +238,7 @@ body{
 
 @media (min-width: 1024px) {
   .container {
-
+    width: 100vw;
   .studio__info {
     margin-top: -100px;
     flex-direction: row;

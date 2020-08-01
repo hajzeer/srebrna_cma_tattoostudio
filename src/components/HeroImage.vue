@@ -92,7 +92,7 @@ export default {
   .hero__image {
 
     .logo {
-      width:70%;
+      width: 70%;
     }
     .scroll__text {
       font-size: 25px;
@@ -120,7 +120,7 @@ export default {
 
 .before-enter {
   transform: scale(1.7);
-  transition: all .6s 5.2s ease-in-out;
+  transition: all .6s 5.5s ease-in-out;
 }
 .enter{
   transform: scale(1);
