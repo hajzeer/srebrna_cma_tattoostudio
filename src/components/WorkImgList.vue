@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-
+    <link rel=preload>
       <img class="portfolio__img" v-lazy="photos" @click="handleClick()"/>
   </div>
 </template>

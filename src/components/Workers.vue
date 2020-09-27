@@ -1,5 +1,6 @@
 <template>
 <div class="workers">
+  <link rel=preload>
     <div v-scrollanimation class="studio__crew">
         <div class="personal__info1">
         <img v-scrollanimation class="personal__photo" v-lazy="photo"/>
