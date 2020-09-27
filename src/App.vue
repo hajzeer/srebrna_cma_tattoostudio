@@ -45,6 +45,14 @@
       </div>
       <div class="studio__portfolio">
         <h1 v-scrollanimation>NASZE PRACE</h1>
+        <div class="resoults">
+        <WorkImgList
+          v-scrollanimation
+          v-for="item in portfolio"
+          :item="item"
+          :key="item.id"
+        />
+        </div>
       </div>
     </div>
   </div>
@@ -55,8 +63,20 @@ import HeroImage from './components/HeroImage.vue';
 import Contact from './components/Contact.vue';
 import Workers from './components/Workers.vue';
 import LoadingScreen from './components/loading_screen.vue';
+import WorkImgList from './components/WorkImgList.vue';
 
 import photo0 from './assets/pelikan.jpg';
+
+import workImg1 from './assets/WorkImg/img_1.jpg';
+import workImg2 from './assets/WorkImg/img_2.jpg';
+import workImg3 from './assets/WorkImg/img_3.jpg';
+import workImg4 from './assets/WorkImg/img_4.jpg';
+import workImg5 from './assets/WorkImg/img_5.jpg';
+import workImg6 from './assets/WorkImg/img_6.jpg';
+import workImg7 from './assets/WorkImg/img_7.jpg';
+import workImg8 from './assets/WorkImg/img_8.jpg';
+import workImg9 from './assets/WorkImg/img_9.jpg';
+
 
 export default {
   name: 'App',
@@ -74,17 +94,57 @@ export default {
           ig_href: 'https://www.instagram.com/tattoopelikan/?hl=pl',
         },
         {
-          id: 0,
+          id: 1,
           photo: '#',
           name: 'Magda',
           desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie je to miejsce',
           ig_href: 0,
         },
       ],
+
+      portfolio: [
+        {
+          id: 0,
+          photo: workImg1,
+        },
+        {
+          id: 1,
+          photo: workImg2,
+        },
+        {
+          id: 2,
+          photo: workImg3,
+        },
+        {
+          id: 3,
+          photo: workImg4,
+        },
+        {
+          id: 4,
+          photo: workImg5,
+        },
+        {
+          id: 5,
+          photo: workImg6,
+        },
+        {
+          id: 6,
+          photo: workImg7,
+        },
+        {
+          id: 7,
+          photo: workImg8,
+        },
+        {
+          id: 8,
+          photo: workImg9,
+        },
+      ],
     };
   },
 
   components: {
+    WorkImgList,
     HeroImage,
     Contact,
     Workers,
@@ -111,13 +171,14 @@ export default {
 
 .before-fixed {
   opacity: 0;
-  transition: all .6s 7s ease-in-out;
+  transition: all .6s 10s ease-in-out;
 }
 .fixed{
   opacity: 1;
 }
 
 body{
+  width: 100%;
   margin: 0;
   background-color: #E3E3E3;
 }
@@ -142,8 +203,9 @@ body{
     }
 
 .container{
+  overflow: hidden;
   background-color: #353535;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   top: 0;
@@ -156,6 +218,7 @@ body{
   box-shadow: 0 0 50rem #E3E3E3;
 
   header{
+    overflow: hidden;
     display: block;
     height: 80px;
     border-bottom: 35px solid transparent;
@@ -201,6 +264,16 @@ body{
     font-size: 30px;
     font-weight: 500;
     color: #E3E3E3;
+  }
+
+  .resoults {
+    margin-top: 1em;
+    justify-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }
 
@@ -261,6 +334,9 @@ body{
   h1{
     font-size: 4em;
   }
+    .resoults {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
 

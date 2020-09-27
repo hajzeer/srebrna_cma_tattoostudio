@@ -48,10 +48,10 @@ export default {
 <style lang="scss" scoped>
 
   .workers {
-    max-width: 100%;
+    width: 100%;
   }
 .studio__crew{
-    width: 100vw;
+    width: 100%;
     margin: 0 0 50px 0;
     padding: 0;
     top: 0;
