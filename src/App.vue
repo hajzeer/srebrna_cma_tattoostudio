@@ -59,11 +59,6 @@
 </template>
 
 <script>
-import HeroImage from './components/HeroImage.vue';
-import Contact from './components/Contact.vue';
-import Workers from './components/Workers.vue';
-import LoadingScreen from './components/loading_screen.vue';
-import WorkImgList from './components/WorkImgList.vue';
 
 import photo0 from './assets/pelikan.jpg';
 
@@ -144,11 +139,11 @@ export default {
   },
 
   components: {
-    WorkImgList,
-    HeroImage,
-    Contact,
-    Workers,
-    LoadingScreen,
+    WorkImgList: () => import('./components/WorkImgList.vue'),
+    HeroImage: () => import('./components/HeroImage.vue'),
+    Contact: () => import('./components/Contact.vue'),
+    Workers: () => import('./components/Workers.vue'),
+    LoadingScreen: () => ('./components/loading_screen.vue'),
   },
   methods: {
     toggleClick() {
