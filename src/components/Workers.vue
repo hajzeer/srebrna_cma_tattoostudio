@@ -2,7 +2,7 @@
 <div class="workers">
     <div v-scrollanimation class="studio__crew">
         <div class="personal__info1">
-        <img v-scrollanimation class="personal__photo" :src="photo"/>
+        <img v-scrollanimation class="personal__photo" v-lazy="photo"/>
         <h2 v-scrollanimation class="personal__name">{{name}}</h2>
         </div>
         <div class="personal__info2">

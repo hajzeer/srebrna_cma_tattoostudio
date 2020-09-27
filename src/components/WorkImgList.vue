@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio">
 
-      <img class="portfolio__img" :src="photos" @click="handleClick()"/>
+      <img class="portfolio__img" v-lazy="photos" @click="handleClick()"/>
   </div>
 </template>
 

@@ -36,7 +36,7 @@ export default {
   left: 0;
   padding: 0;
   margin: 0;
-  background-image: url('../assets/HeroImage.jpg');
+  background-image: url('../assets/HeroImage1.jpg');
   background-repeat: no-repeat;
   background-size:cover;
   background-position: 50% 100%;

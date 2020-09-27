@@ -143,7 +143,7 @@ export default {
     HeroImage: () => import('./components/HeroImage.vue'),
     Contact: () => import('./components/Contact.vue'),
     Workers: () => import('./components/Workers.vue'),
-    LoadingScreen: () => ('./components/loading_screen.vue'),
+    LoadingScreen: () => import('./components/loading_screen.vue'),
   },
   methods: {
     toggleClick() {
