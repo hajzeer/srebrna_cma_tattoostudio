@@ -1,8 +1,6 @@
 # Srebrna Ćma Tattoo Studio
 
-## Created by: Krzysztof Hajder and Grupa CODA
+## Created by: Krzysztof Hajder
 
 ## powered by: Vue.js
-
-## features: Instagram API
 
