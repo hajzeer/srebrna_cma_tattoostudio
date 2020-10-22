@@ -11,6 +11,10 @@ demo: [srebrnacma.pl](https://srebrnacma.pl/)
 * vue-cli [Vue Cli documentation](https://cli.vuejs.org/guide/)
 * Vue-lazyload version: 1.3.2 [Vue lazy load documentation](https://github.com/hilongjw/vue-lazyload#readme)
 
-## Setup
-To run this project locally clone GitHub repository
+## How to run rhe code?
+```
+1. npm
+2. cd srebrnacma_app
+3. np run serve
+```
 
