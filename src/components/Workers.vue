@@ -66,7 +66,6 @@ export default {
     .personal__photo{
       margin-top: 50px;
       width: 300px;
-      border-radius: 25px;
       box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
     }
     .personal__name{
