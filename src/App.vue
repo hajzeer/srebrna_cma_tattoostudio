@@ -93,7 +93,7 @@ export default {
           id: 1,
           photo: magda,
           name: 'Magda',
-          desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie je to miejsce',
+          desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie jej to miejsce',
           ig_href: 0,
         },
       ],
