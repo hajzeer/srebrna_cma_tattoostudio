@@ -22,7 +22,7 @@
           <img
             v-scrollanimation
             class="studio__photo"
-            src="../src/assets/studio_photo.jpg"
+            src="../src/assets/42R.jpg"
             alt="studio photo"
           />
       <p v-scrollanimation class="studio__description">
@@ -60,7 +60,8 @@
 
 <script>
 
-import photo0 from './assets/pelikan.jpg';
+import pelikan from './assets/01R.jpg';
+import magda from './assets/17R.jpg';
 
 import workImg1 from './assets/WorkImg/img_1.jpg';
 import workImg2 from './assets/WorkImg/img_2.jpg';
@@ -83,14 +84,14 @@ export default {
       workers: [
         {
           id: 0,
-          photo: photo0,
+          photo: pelikan,
           name: 'Rafał "Pelikan" Kowalski',
           desc: 'Rafał „Pelikan”– założyciel Srebrnej Ćmy. Tatuator od 2015 roku. Tarnogórzanin, który ostatnie lata spędził pracując w katowickich studiach tatuażu. Najlepiej czuje się w czerni, pracując w stylu dotwork/blackwork. Jego tatuaże cechują się delikatną kreską, ale woli gdy jego prace po prostu mówią same za siebie',
           ig_href: 'https://www.instagram.com/tattoopelikan/?hl=pl',
         },
         {
           id: 1,
-          photo: '#',
+          photo: magda,
           name: 'Magda',
           desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie je to miejsce',
           ig_href: 0,
@@ -215,15 +216,15 @@ body{
   header{
     overflow: hidden;
     display: block;
-    height: 80px;
-    border-bottom: 35px solid transparent;
-    border-left: 100vw solid #1c1c1c;
+    width: 100%;
+    height: 100px;
+    background: #1c1c1c;
   }
   .logo{
     align-self: flex-start;
     width: 100px;
     position: relative;
-    top: -6.5em;
+    top: -6em;
     transform: rotate(45deg);
   }
 
@@ -248,8 +249,8 @@ body{
   }
 
   .studio__photo{
-    width: 250px;
-    border-radius: 20%;
+    width: 300px;
+    border-radius: 25px;
     box-shadow: 0 10px 15px -8px rgba(0,0,0, .8);
   }
 
@@ -280,12 +281,11 @@ body{
   .container {
     header {
       top: 0;
-      width: 0;
       height: 150px;
     }
 
     .logo {
-      top: -10.5em;
+      top: -9.5em;
       width: 175px;
     }
 
