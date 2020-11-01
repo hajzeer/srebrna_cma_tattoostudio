@@ -32,7 +32,7 @@
         w branży – Rafał „Pelikan” Kowalski – postanowił stworzyć własne
         miejsce, w którym każdy doświadczy prawdziwego piękna świata tatuażu.
         Świat ten łączy ze sobą ludzi, historie, pasje i marzenia, których
-        wynikiem jest lub będzie Wasz tatuaż
+        wynikiem jest lub będzie Wasz tatuaż.
       </p>
         </div>
       <div class="workers">
@@ -86,14 +86,14 @@ export default {
           id: 0,
           photo: pelikan,
           name: 'Rafał "Pelikan" Kowalski',
-          desc: 'Rafał „Pelikan”– założyciel Srebrnej Ćmy. Tatuator od 2015 roku. Tarnogórzanin, który ostatnie lata spędził pracując w katowickich studiach tatuażu. Najlepiej czuje się w czerni, pracując w stylu dotwork/blackwork. Jego tatuaże cechują się delikatną kreską, ale woli gdy jego prace po prostu mówią same za siebie',
+          desc: 'Rafał „Pelikan”– założyciel Srebrnej Ćmy. Tatuator od 2015 roku. Tarnogórzanin, który ostatnie lata spędził pracując w katowickich studiach tatuażu. Najlepiej czuje się w czerni, pracując w stylu dotwork/blackwork. Jego tatuaże cechują się delikatną kreską, ale woli gdy jego prace po prostu mówią same za siebie.',
           ig_href: 'https://www.instagram.com/tattoopelikan/?hl=pl',
         },
         {
           id: 1,
           photo: magda,
           name: 'Magda',
-          desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie jej to miejsce',
+          desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie jej to miejsce.',
           ig_href: 0,
         },
       ],
