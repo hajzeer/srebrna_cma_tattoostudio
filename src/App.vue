@@ -212,6 +212,7 @@ body{
       border: none;
       background: transparent;
       position: fixed;
+      cursor: pointer;
 
       img{
         width: 100%;
@@ -228,6 +229,7 @@ body{
   border: none;
   background: transparent;
   position: fixed;
+  cursor: pointer;
 
   img{
     width: 100%;
@@ -244,6 +246,7 @@ body{
   border: none;
   background: transparent;
   position: fixed;
+  cursor: pointer;
 
   img{
     width: 100%;
