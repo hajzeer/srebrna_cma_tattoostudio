@@ -204,6 +204,7 @@ body{
 
     .contact__button {
       align-self: flex-start;
+      margin-bottom: 20px;
       z-index: 999;
       width: 60px;
       height: 60px;
@@ -221,6 +222,7 @@ body{
 
 .fb__button {
   align-self: flex-start;
+  margin-bottom: 20px;
   z-index: 999;
   width: 60px;
   height: 60px;
@@ -239,6 +241,7 @@ body{
 .ig__button {
   align-self: flex-start;
   z-index: 999;
+  margin-bottom: 20px;
   width: 60px;
   height: 60px;
   top: 15em;
