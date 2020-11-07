@@ -6,9 +6,15 @@
     <div class="wrapper">
       <HeroImage />
     </div>
-      <button v-fixedposition class="contact__button" @click="toggleClick()">
-        <img src="../src/assets/kontakt button 2.png" alt="contact button 2"/>
+      <button v-fixedposition class="contact__button" @click="handleScroll()">
+        <img src="../src/assets/contact.png" alt="contact button"/>
       </button>
+    <button v-fixedposition class="fb__button" @click="handleClick('https://www.facebook.com/srebrnacma')">
+      <img src="../src/assets/facebook.png" alt="fb button"/>
+    </button>
+    <button v-fixedposition class="ig__button" @click="handleClick('https://www.instagram.com/srebrnacma/')" >
+      <img src="../src/assets/instagram.png" alt="ig button"/>
+    </button>
     <div class="container">
       <transition name="fade">
         <div v-if="visibility">
@@ -54,6 +60,17 @@
         />
         </div>
       </div>
+      <div class="contact__outer">
+        <Contact v-scrollanimation/>
+      </div>
+      <div v-scrollanimation class="footer">
+        <p class="designer">
+          Polityka prywatności: <br/>
+          © 2020  Designed by Grupa CODA
+          for Srebrna Ćma Tattoo Studio<br/>
+          All rights reserved
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -79,8 +96,6 @@ export default {
 
   data() {
     return {
-      visibility: false,
-
       workers: [
         {
           id: 0,
@@ -147,8 +162,12 @@ export default {
     LoadingScreen: () => import('./components/loading_screen.vue'),
   },
   methods: {
-    toggleClick() {
-      this.visibility = !this.visibility;
+    handleScroll() {
+      const el = document.getElementById('contact');
+      el.scrollIntoView(true);
+    },
+    handleClick(el) {
+      window.open(el, '_blank');
     },
   },
 };
@@ -186,7 +205,8 @@ body{
     .contact__button {
       align-self: flex-start;
       z-index: 999;
-      width: 100px;
+      width: 60px;
+      height: 60px;
       top: 7em;
       right: 1em;
       border: none;
@@ -197,6 +217,38 @@ body{
         width: 100%;
       }
     }
+
+.fb__button {
+  align-self: flex-start;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  top: 9em;
+  right: 1em;
+  border: none;
+  background: transparent;
+  position: fixed;
+
+  img{
+    width: 100%;
+  }
+}
+
+.ig__button {
+  align-self: flex-start;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  top: 13em;
+  right: 1em;
+  border: none;
+  background: transparent;
+  position: fixed;
+
+  img{
+    width: 100%;
+  }
+}
 
 .container{
   overflow: hidden;
@@ -272,6 +324,19 @@ body{
   }
 }
 
+.footer {
+  width: 100%;
+  background: #1c1c1c;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 10px;
+  color: #E3E3E3;
+}
+
+contact__outer {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .contact__button {
     top: 17em;
@@ -322,6 +387,9 @@ body{
     .studio__description {
       width: 500px;
       font-size: 20px;
+    }
+    .footer {
+      font-size: 15px;
     }
   }
 
