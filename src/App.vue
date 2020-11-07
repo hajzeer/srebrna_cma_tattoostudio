@@ -223,7 +223,7 @@ body{
   z-index: 999;
   width: 60px;
   height: 60px;
-  top: 9em;
+  top: 11em;
   right: 1em;
   border: none;
   background: transparent;
@@ -239,7 +239,7 @@ body{
   z-index: 999;
   width: 60px;
   height: 60px;
-  top: 13em;
+  top: 15em;
   right: 1em;
   border: none;
   background: transparent;
@@ -340,6 +340,12 @@ contact__outer {
 @media (min-width: 768px) {
   .contact__button {
     top: 17em;
+  }
+  .fb__button {
+    top: 21em;
+  }
+  .ig__button {
+    top: 25em;
   }
 
   .container {
