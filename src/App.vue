@@ -16,11 +16,6 @@
       <img src="../src/assets/instagram.png" alt="ig button"/>
     </button>
     <div class="container">
-      <transition name="fade">
-        <div v-if="visibility">
-          <Contact />
-        </div>
-      </transition>
       <header>
       </header>
       <img class="logo" src="../src/assets/srebrna_cma_logo —smokewhite.png" alt="logo"/>
@@ -196,10 +191,14 @@ body{
   width: 100%;
   margin: 0;
   background-color: #E3E3E3;
+  scroll-behavior: smooth;
+
 }
 .wrapper{
   width: 100%;
   height: 100vh;
+  scroll-behavior: auto;
+
 }
 
     .contact__button {
