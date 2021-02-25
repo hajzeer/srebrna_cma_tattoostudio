@@ -74,6 +74,7 @@
 
 import pelikan from './assets/01R.jpg';
 import magda from './assets/17R.jpg';
+import momo from './assets/155.png';
 
 import workImg1 from './assets/WorkImg/img_1.jpg';
 import workImg2 from './assets/WorkImg/img_2.jpg';
@@ -105,6 +106,13 @@ export default {
           name: 'Magda',
           desc: 'Magda – menadżerka studia. Wkraczająca w świat tatuażu, gotowa na wszystkie nowe wyzwania, które przyniesie jej to miejsce.',
           ig_href: 0,
+        },
+        {
+          id: 2,
+          photo: momo,
+          name: 'Momo Młynarska',
+          desc: 'Momo Młynarska – zajmuje się rysunkiem i ilustracją. Absolwentka malarstwa, które ukończyła na katowickiej ASP. Praktykantka rozwijająca swoje umiejętności tatuatorskie pod czujnym okiem Pelikana. Swoje pierwsze kroki stawiała w studiach we Wrocławiu i Katowicach. Kocha pieski.',
+          ig_href: 'https://www.instagram.com/momomlynarska/',
         },
       ],
 
