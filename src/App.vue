@@ -61,7 +61,7 @@
       <div v-scrollanimation class="footer">
         <p class="designer">
           Polityka prywatności: <br/>
-          © 2020  Designed by Grupa CODA
+          © 2020  Designed by Krzysztof Hajder
           for Srebrna Ćma Tattoo Studio<br/>
           All rights reserved
         </p>
